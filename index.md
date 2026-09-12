@@ -5,7 +5,7 @@ title: DeltaLab Privacy Policy
 # DeltaLab Privacy Policy
 
 **Effective date: 7 July 2026**
-**Last updated: 10 September 2026**
+**Last updated: 12 September 2026**
 
 *This policy applies to DeltaLab on the App Store and in TestFlight beta. It may be revised as the app develops; the "last updated" date above always reflects the current version.*
 
@@ -53,7 +53,7 @@ To make the app usable, some data is stored locally on your device. **None of it
 - **Handover sheets.** Ward-round handover PDFs you generate are saved in the app's cache so you can share them, until you clear them (see below).
 - **Theme and app settings.** Your display preferences and your timeline panel choices are stored locally.
 - **Your free-tier daily count.** So the app can tell how many patients you have opened today, it keeps a small counter in the iOS Keychain: today's date, and a short scrambled code for each patient record you opened today. The code is derived from the record number using a random value created on your device; it is **not the record number itself**, and the counter holds no name, no hospital number and no result value. Nobody can read a list of patients out of it; someone who already knew a particular record number and had your unlocked phone could, at most, check whether that record was opened today. It is never transmitted anywhere. It only ever holds one day's worth: the first time you use the app on a new day, the previous day's entries are discarded.
-- **Diagnostic records.** To help us fix problems, the app keeps small technical logs on your device: lab **test names** it did not recognise, and a record of cases where its fast first display of an episode's results disagreed with the full results that followed — which test, what kind of mismatch, when, and the **lab episode number**. They never contain a patient's name, hospital number, record number or any result value. They are never sent anywhere automatically. You can view the second of these, and share it yourself as a report, under **Settings → Customisation**; the report includes episode numbers, so only share it if you choose to help us investigate a problem.
+- **Diagnostic records.** To help us fix problems, the app keeps small technical logs on your device: lab **test names** it did not recognise, and — **only on the developer's own development builds** — a record of cases where its fast first display of an episode's results disagreed with the full results that followed (which test, what kind of mismatch, when, and the **lab episode number**). **On the app you install — from the App Store or through TestFlight — that second record is not kept at all**: nothing is written, and nothing is shown. They never contain a patient's name, hospital number, record number or any result value. They are never sent anywhere automatically. On a development build, which keeps them, they can be viewed and shared as a report from an internal diagnostics area in **Settings** that is not shown unless you deliberately open it; the report includes episode numbers, so only share it if you choose to help us investigate a problem. Whether or not that area is showing, and on every version of the app, **Settings → "Clear all data & log out"** deletes these records (see below).
 
 Because these caches contain patient information, you should protect your device with a passcode/biometrics and treat it the way you would treat any device you use to view patient records.
 
@@ -107,7 +107,7 @@ Where the app does touch your **own** personal information (your NHLS credential
 - **Recently viewed patients, cached results, and timelines** are retained until you clear them, or until the app evicts older entries to stay within its cache limits.
 - **Your ward-round list** is retained until you remove patients from it or clear it.
 - **Cached PDF reports** are retained for a maximum of 48 hours, then automatically deleted. **Handover sheets** are retained until you use "Clear all data & log out", or until iOS clears the app's cache to free up storage.
-- **Diagnostic records** are capped in size, and are deleted by "Clear all data & log out".
+- **Diagnostic records** are capped in size, and are deleted by "Clear all data & log out". The results-comparison record described above is kept only on the developer's own development builds; on the app you install there is nothing to retain.
 - **The free-tier daily count** holds only the current day's entries; they are discarded and replaced the first time you use the app on a new day. If you stop using the app entirely, the last day's entries stay in the Keychain until you next open it or erase the device. It survives app deletion (see above).
 - **The developer retains none of the above**, because none of it is transmitted to us.
 - **Apple, RevenueCat, and Expo** retain the subscription/update data they receive according to their own retention policies (linked above).

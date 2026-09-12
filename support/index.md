@@ -62,7 +62,7 @@ If it keeps happening, email us describing what you saw. You don't need to inclu
 
 This means your phone has an internet connection but the NHLS portal didn't respond, or returned an error. Usually that is genuine — NHLS is temporarily unavailable — and it clears on its own; the app keeps retrying in the background.
 
-On a weak or patchy connection, though, the app can occasionally show this message even when NHLS is working. That's a known issue we're fixing. If a search works when you tap Retry, that is what happened.
+Older versions could show this message on a weak or patchy connection even when NHLS was working. Since the September 2026 update the app checks NHLS directly before announcing an outage, and a slow link is reported as "Slow connection to NHLS" instead (below). If you still see "NHLS appears to be down" and a search works when you tap Retry, please tell us — that is the case we want to hear about.
 
 If the app says **"Slow connection to NHLS"**, requests are taking too long to come back. That can be a weak signal or NHLS running slowly — the app can't tell which — so try again in a moment, or move somewhere with better signal. If your phone has no connection at all, it says "You appear to be offline" instead.
 
